@@ -1,7 +1,7 @@
 import React from "react";
 
-const Backtop = () => {
+const BackTop = () => {
   return <div></div>;
 };
 
-export default Backtop;
+export default BackTop;

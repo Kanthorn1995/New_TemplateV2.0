@@ -8,6 +8,7 @@ import {
   BookOutlined,
   ContainerOutlined,
 } from "@ant-design/icons";
+import styled from "styled-components";
 const Menuitem = () => {
   const [activeMenu, setActiveMenu] = useState("");
 
@@ -88,12 +89,13 @@ const Menuitem = () => {
     </Menu>
   );
   return (
-    <>
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={[activeMenu]}>
+    <CustomHeaderBar>
+      <Menu mode="horizontal" defaultSelectedKeys={[activeMenu]}>
         <Menu.Item
           key="1"
           icon={<HomeOutlined />}
           onClick={() => setActiveMenu("1")}
+          style={{ backgroundColor: "red" }}
         >
           <Link to="/">Home</Link>
         </Menu.Item>
@@ -102,6 +104,7 @@ const Menuitem = () => {
             key="2"
             icon={<BookOutlined />}
             onClick={() => setActiveMenu("2")}
+            style={{ backgroundColor: "red" }}
           >
             <Link to="/category"> Category</Link>
           </Menu.Item>
@@ -110,6 +113,7 @@ const Menuitem = () => {
           key="3"
           icon={<ContainerOutlined />}
           onClick={() => setActiveMenu("3")}
+          style={{ backgroundColor: "red" }}
         >
           <Link to="/blog">Blog</Link>
         </Menu.Item>
@@ -118,12 +122,23 @@ const Menuitem = () => {
           key="4"
           icon={<PhoneOutlined />}
           onClick={() => setActiveMenu("4")}
+          style={{ backgroundColor: "red" }}
         >
           <Link to="/contactus">Contactus</Link>
         </Menu.Item>
       </Menu>
-    </>
+    </CustomHeaderBar>
   );
 };
 
 export default Menuitem;
+
+const CustomHeaderBar = styled.div`
+  background=color: red;
+  color: white;
+`;
+
+// const MenuStyled = styled(Menu)`
+//   background=color: red;
+//   color: white;
+// `;

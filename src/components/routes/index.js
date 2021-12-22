@@ -1,22 +1,20 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import Blog from "../../containers/Blog";
-import Category from "../../containers/Category";
-import Contactus from "../../containers/ContactUs";
-import Homepage from "../../containers/HomePage";
-// import Page404 from "../pages/Page404";
+
+import ContentsBlog from "../contents/ContentsBlog";
+import ContentsCatagory from "../contents/ContentsCatagory";
+import ContentsContactUs from "../contents/ContentsContactUs";
+import ContentsHomePage from "../contents/ContentsHomePage";
 
 const Routers = () => {
   return (
     <Switch>
-      <Route exact component={Homepage} path="/"></Route>
-      <Route component={Category} path="/category"></Route>
-      <Route component={Blog} path="/blog"></Route>
-      <Route component={Contactus} path="/contactus"></Route>
+      <Route exact component={ContentsHomePage} path="/"></Route>
+      <Route component={ContentsCatagory} path="/category"></Route>
+      <Route component={ContentsBlog} path="/blog"></Route>
+      <Route component={ContentsContactUs} path="/contactus"></Route>
 
-      {/* <Route path="*">
-        <Page404 />
-      </Route> */}
+      {/* <OtherRoute component={Page404} path="*"></OtherRoute> */}
     </Switch>
   );
 };

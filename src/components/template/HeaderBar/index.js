@@ -41,6 +41,12 @@ const Headerbar = () => {
           flexDirection: "row",
           justifyContent: "center",
           height: 70,
+          position: "sticky",
+
+          position: "fixed",
+          zIndex: 1,
+          width: "100%",
+          backgroundColor: "red",
         }}
       >
         <CustomMemuItem>
